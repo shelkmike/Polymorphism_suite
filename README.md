@@ -2,15 +2,13 @@ This is a set of two scripts for the calculation of <b>polymorphism</b> from <b>
 
 The two scripts are as follows:<br>
 1) <i>calculate_polymorphism_using_entire_alignment.py</i> — calculates polymorphism for the <b>entire</b> alignment.<br>
-2) <i>calculate_polymorphism_in_windows.py</i> — splits the input alignment into <b>windows</b> (for example, 100 base pairs with a step of 1 base pair), then calculates the polymorphism for each window, and outputs all the results into a table.
-<br><br>
+2) <i>calculate_polymorphism_in_windows.py</i> — splits the input alignment into <b>windows</b> (for example, 100 base pairs with a step of 1 base pair), then calculates the polymorphism for each window, and outputs all the results into a table.<br><br>
 
 ## Installation
 1) Install the Python libraries <i>natsort</i> and <i>dendropy</i>. This can be done, for example, with the following command:<br>
-`pip3 install --upgrade --user natsort dendropy` <br>
+`pip3 install --upgrade --user natsort dendropy`<br>
 2) Download the archive with the latest release from https://github.com/shelkmike/Polymorphism_suite/releases and unpack it.<br><br>
-That's it, nothing else needs to be done.
-<br>
+That's it, nothing else needs to be done.<br>
 
 ## How to run the scripts
 Both scripts use positional arguments.<br>
@@ -18,10 +16,9 @@ Both scripts use positional arguments.<br>
 This script has <b>3 positional arguments</b>:<br>
 1) Path to the input multiple alignment in FASTA format.<br>
 2) Number of threads.<br>
-3) Path to the output folder. If it does not exist, the script will create it.<br>
-<br>
+3) Path to the output folder. If it does not exist, the script will create it.<br><br>
 Example:<br>
-`python3 calculate_polymorphism_using_entire_alignment.py some_alignment.fasta 10 Output_folder` <br>
+`python3 calculate_polymorphism_using_entire_alignment.py some_alignment.fasta 10 Output_folder`<br>
 
 ### 2) calculate_polymorphism_in_windows.py
 This script has <b>7 positional arguments</b>:<br>
@@ -31,11 +28,9 @@ This script has <b>7 positional arguments</b>:<br>
 4) Circular or non-circular sequence. In the case of circular (e.g., alignment of an entire mitochondrial genome), the script will also consider windows that cross the beginning and end of the alignment. In the case of non-circular, the edge windows will be used truncated. The values should be "circular" or "non-circular" respectively.<br>
 5) Should the center of the first window be at position 1 or at position (window_length / 2). In the second case, the first window will not cross the edge of the genome (if the previous option is "circular") and will not be shortened (if the previous option is "non-circular"). The value must be "start_from_1" or "start_from_window_center".<br>
 6) Number of threads.<br>
-7) Path to the output folder. If it does not exist, the script will create it. <br>
-<br>
+7) Path to the output folder. If it does not exist, the script will create it. <br><br>
 Example:<br>
-`python3 calculate_polymorphism_in_windows.py some_alignment.fasta 100 1 circular start_from_1 10 Output_folder` <br>
-<br>
+`python3 calculate_polymorphism_in_windows.py some_alignment.fasta 100 1 circular start_from_1 10 Output_folder` <br><br>
 
 ## Output format
 ### 1) calculate_polymorphism_using_entire_alignment.py
@@ -46,8 +41,7 @@ The output folder will contain <b>CSV files</b> with the following tables:<br>
 Also, the output folder will have a file metrics_of_polymorphism.txt, which contains values of MPPI, MPMLD, and pi, that are essentially the arithmetic mean values for the three tables mentioned above, respectively.<br>
 
 ### 2) calculate_polymorphism_in_windows.py
-The output folder will contain a single table in which the MPPI, MPMLD, and pi values are recorded for each position of the genome (the position is counted from 1, not 0) for the window whose center is at that position. If the window length is even, the rightmost of the two central nucleotides is considered the center of the window.<br>
-<br>
+The output folder will contain a <b>single CSV-file</b> in which the MPPI, MPMLD, and pi values are recorded for each position of the genome (the position is counted from 1, not 0) for the window whose center is at that position. If the window length is even, the rightmost of the two central nucleotides is considered the center of the window.<br><br>
 ## Questions and answers:
 1) Can these scripts perform polymorphism analysis based on pairwise alignment rather than multiple alignment?<br>
 Yes.<br>
