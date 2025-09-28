@@ -1,4 +1,4 @@
-This is a set of two scripts for the calculation of <b>polymorphism</b> from <b>multiple sequence alignments</b>. You give a script a multiple alignment of DNA, RNA or proteins as input, and it outputs various information about polymorphism. For details on the different metrics of polymorphism that the scripts calculate, see Table 1 in the article "The plastid genome of the non-photosynthetic plant Rhopalocnemis phalloides is among the most polymorphic genomes known" (link to the table: [to be added soon]).<br>
+This is a set of two scripts for the calculation of <b>polymorphism</b> from <b>multiple sequence alignments</b>. You give a script a multiple alignment of DNA, RNA or proteins as input, and it outputs various information about polymorphism. For details on the different metrics of polymorphism that the scripts calculate, see Table 1 in the article "The plastid genome of the non-photosynthetic plant <i>Rhopalocnemis phalloides</i> is among the most polymorphic genomes known" (link to the table: [to be added soon]).<br>
 
 The two scripts are as follows:<br>
 1) <i>calculate_polymorphism_using_entire_alignment.py</i> — calculates polymorphism for the <b>entire</b> alignment.<br>
@@ -56,4 +56,4 @@ These scripts come with IQ-TREE, which is used to calculate phylogenetic distanc
 In pairwise comparison, columns in which both sequences have gaps are not taken into account at all. That is, for example, if the alignment length is 1000 nucleotides, and both sequences have gaps in 10 positions, then the pairwise comparison will be made only on 990 positions.<br>
 
 5) Where can I read about Polymorphism suite in more detail?<br>
-See the section "Methods of polymorphism calculation" in the article "The plastid genome of the non-photosynthetic plant Rhopalocnemis phalloides is among the most polymorphic genomes known" ([link to be added soon])
+See the section "Methods of polymorphism calculation" in the article "The plastid genome of the non-photosynthetic plant <i>Rhopalocnemis phalloides</i> is among the most polymorphic genomes known" ([link to be added soon])
